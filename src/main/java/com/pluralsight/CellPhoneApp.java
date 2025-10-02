@@ -1,18 +1,34 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class CellPhoneApp {
 
     public static void main(String[]args){
 
-        CellPhone myCellPhone = new CellPhone();
+        Scanner scanner = new Scanner(System.in);
+        CellPhone myPhone = new CellPhone();
 
-        System.out.print("What is the serial number? ");
+
+        myPhone.getSerialNumber();
+        System.out.print("What is the serial number? : ");
+        int SerialNumber = scanner.nextInt();
+
+        myPhone.getModel();
         System.out.print("What model is the phone?");
-        System.out.println("Who is the carrier?");
-        System.out.println("What is the phone number?");
+        String model = scanner.nextLine();
+
+        myPhone.getCarrier();
+        System.out.print("Who is the carrier?");
+        String carrier = scanner.nextLine();
+
+        myPhone.getPhoneNumber();
+        System.out.print("What is the phone number?");
+        String phoneNumber = scanner.nextLine();
+
+        myPhone.getOwner();
         System.out.println("Who is the owner of the phone?");
-        
+        String owner = scanner.nextLine();
+
     }
-
-
 }
