@@ -13,6 +13,7 @@ public class CellPhoneApp {
         myPhone.getSerialNumber();
         System.out.print("What is the serial number? : ");
         int SerialNumber = scanner.nextInt();
+        scanner.nextLine();
 
         myPhone.getModel();
         System.out.print("What model is the phone?");
@@ -26,9 +27,12 @@ public class CellPhoneApp {
         System.out.print("What is the phone number?");
         String phoneNumber = scanner.nextLine();
 
-        myPhone.getOwner();
-        System.out.println("Who is the owner of the phone?");
+
+        System.out.print("Who is the owner of the phone?");
         String owner = scanner.nextLine();
+        myPhone.setOwner(owner);
+
+        myPhone.dail("704-237-2839");
 
     }
 }
